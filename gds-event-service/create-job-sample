@@ -1,0 +1,43 @@
+{
+	"session":"SYSTEM",
+	 "data": {
+	 	"eventName":"VERIFIY_REQUEST_PROCEDURE",
+	 	"eventType":"PROCEDURE",
+		"eventSequence" :[
+				{
+					"eventName":"FETCH_PATRON_ID_DETAIL",
+					"action":"Students.getStudentById",
+					"input": {
+						"path": {
+							"studentId":"123359"
+						}
+					}
+				},
+				{
+					"eventName":"CREATE_VERIFICATION_LINK",
+					"action":"Tickets.createVerificationLink",
+					"input": {
+						"body": {
+							"firstName":"{data.firstName}",
+							"middleName":"{data.middleName}",
+							"lastName":"{data.lastName}",
+							"studentId":"{data.studentID}",
+							"emailAddress":"{data.emailAddress}"
+						}
+					}
+				},
+				{
+					"eventName":"EMAIL_VERIFICATION_LINK",
+					"action":"EMAIL SERVICE.sendEmail",
+					"input": {
+						"body": {
+							"sender":"admin@school.something",
+							"recipient":"{verification.data.patronEmail}",
+							"subject": "Request verification",
+							"content": "{verification.data.link}"
+						}
+					}
+				}
+		]
+	 }
+}
