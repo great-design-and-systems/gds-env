@@ -1,0 +1,37 @@
+var GDSConfig = require('gds-config');
+var GDSUtil = GDSConfig.GDSUtil;
+var GDSEventJobs = GDSConfig.GDSEventJobs;
+new GDSUtil().initEvents(() => {
+ 
+     new GDSEventJobs().createProcedureJob('VERIFIY_REQUEST_PROCEDURE', 'SYSTEM')
+		.setNextEvent('FETCH_PATRON_ID_DETAIL','Students.getStudentById')
+		.addPath('studentId'
+		.setNextEvent('CREATE_VERIFICATION_LINK','Tickets.createVerificationLink')
+		.addBody('patronId','0001234')
+		.addBody('itemId','012349')
+		
+
+
+    new GDSEventJobs().createProcessJob('CREATE_STUDENT','Students.createStudent')
+	.excute((err) => {
+		
+	});
+
+
+    new GDSEventJobs().createScheduledJob('CREATE_STUDENT_SCHEDULED', 'SYSTEM')
+	.setDateTime(new Date(2016, 11, 11, 21, 25, 0, 0))
+        .setNextEvent('CREATE_STUDENT', 'PROCESS', {
+		action: 'Students.createStudent'
+	})
+        .addBody('studentId', '123358')
+        .addBody('firstName', 'Jerico')
+        .addBody('middleName', 'Gadi')
+        .addBody('lastName', 'de Guzman')
+        .addBody('gender', 'MALE')
+        .addBody('contactNo', '09175485770')
+        .addBody('emailAddress', 'rickzx98@gmail.com')
+        .execute((err, result) => {
+            console.log('err =>', err);
+            console.log('result =>', result);
+        });
+});
