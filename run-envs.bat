@@ -32,6 +32,15 @@ cd ..
 cd gds-ticket-service
 start cmd /k nf start dev
 cd ..
+cd user-service
+start cmd /k nf start web
+cd ..
+cd time-service
+start cmd /k nf start web
+cd ..
+cd school-config-service
+start cmd /k nf start web
+cd ..
 cd gds-ms-api
 start cmd /k nf start dev
 cd ..
