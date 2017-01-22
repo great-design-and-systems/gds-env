@@ -1,47 +1,47 @@
 cd ..
 cd security-service
-start cmd /k nf start dev
+start "security-service" cmd forever start /k nf start dev
 cd ..
 cd gds-logger
-start cmd /k nf start dev
+start "gds-logger" cmd forever start /k nf start dev
 cd ..
 cd student-service
-start cmd /k nf start app
+start "student-service" cmd forever start /k nf start app
 cd .. 
 cd faculty-service
-start cmd /k nf start app
+start "faculty-service" cmd forever start /k nf start app
 cd ..
 cd file-service
-start cmd /k nf start web
+start "file-service" cmd forever start /k nf start web
 cd ..
 cd import-service
-start cmd /k nf start web
+start "import-service" cmd forever start /k nf start web
 cd ..
 cd item-service
-start cmd /k nf start dev
+start "item-service" cmd forever start /k nf start dev
 cd ..
 cd category-service
-start cmd /k nf start dev
+start "category-service" cmd forever start /k nf start dev
 cd ..
 cd gds-event-service
-start cmd /k nf start dev
+start "gds-event-service" cmd forever start /k nf start dev
 cd ..
 cd gds-event-processor
-start cmd /k nf start dev
+start "gds-event-processor" cmd forever start /k nf start dev
 cd ..
 cd gds-ticket-service
-start cmd /k nf start dev
+start "gds-ticket-service" cmd forever start /k nf start dev
 cd ..
 cd user-service
-start cmd /k nf start web
+start "user-service" cmd forever start /k nf start web
 cd ..
 cd time-service
-start cmd /k nf start web
+start "time-service" cmd forever start /k nf start web
 cd ..
 cd school-config-service
-start cmd /k nf start web
+start "school-config-service" cmd forever start /k nf start web
 cd ..
 cd gds-ms-api
-start cmd /k nf start dev
+start "gds-ms-api" cmd forever start /k nf start dev
 cd ..
 cd gds-env
