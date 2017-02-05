@@ -41,6 +41,9 @@ cd ..
 cd school-config-service
 start cmd /k npm install
 cd ..
+cd book-service
+start cmd /k npm install
+cd ..
 cd gds-ms-api
 start cmd /k npm install
 cd ..

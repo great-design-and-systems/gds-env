@@ -12,4 +12,5 @@ copy file-service\.env  ..\file-service\.env
 copy user-service\.env  ..\user-service\.env
 copy time-service\.env  ..\time-service\.env
 copy school-config-service\.env  ..\school-config-service\.env
+copy book-service\.env  ..\book-service\.env
 copy gds-ms-api\.env  ..\gds-ms-api\.env

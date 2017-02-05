@@ -14,4 +14,5 @@ git clone https://github.com/great-design-and-systems/gds-ms-api.git
 git clone https://github.com/great-design-and-systems/time-service.git
 git clone https://github.com/great-design-and-systems/school-config-service.git
 git clone https://github.com/great-design-and-systems/user-service.git
+git clone https://github.com/great-design-and-systems/book-service.git
 cd gds-env
