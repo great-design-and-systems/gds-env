@@ -29,16 +29,6 @@ git pull
 start "import-service" cmd forever start /k nf start web
 ping 127.0.0.1 -n 6 > nul
 cd ..
-cd item-service
-git pull
-start "item-service" cmd forever start /k nf start dev
-ping 127.0.0.1 -n 6 > nul
-cd ..
-cd category-service
-git pull
-start "category-service" cmd forever start /k nf start dev
-ping 127.0.0.1 -n 6 > nul
-cd ..
 cd gds-event-service
 git pull
 start "gds-event-service" cmd forever start /k nf start dev
@@ -69,14 +59,14 @@ git pull
 start "school-config-service" cmd forever start /k nf start web
 ping 127.0.0.1 -n 6 > nul
 cd ..
-cd book-service
+cd school-config-service
 git pull
-start "book-service" cmd forever start /k nf start dev
+start "school-config-service" cmd forever start /k nf start web
 ping 127.0.0.1 -n 6 > nul
 cd ..
-cd gds-ms-api
+cd cataloguing-service
 git pull
-start "gds-ms-api" cmd forever start /k nf start dev
+start "cataloguing-service" cmd forever start /k nf start dev
 ping 127.0.0.1 -n 6 > nul
 cd ..
 cd gds-env

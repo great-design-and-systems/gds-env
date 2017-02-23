@@ -17,12 +17,6 @@ cd ..
 cd import-service
 start cmd /k npm install
 cd ..
-cd item-service
-start cmd /k npm install
-cd ..
-cd category-service
-start cmd /k npm install
-cd ..
 cd gds-event-service
 start cmd /k npm install
 cd ..
@@ -41,7 +35,7 @@ cd ..
 cd school-config-service
 start cmd /k npm install
 cd ..
-cd book-service
+cd cataloguing-service
 start cmd /k npm install
 cd ..
 cd gds-ms-api
