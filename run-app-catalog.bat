@@ -34,4 +34,9 @@ git pull
 start "cataloguing-service" cmd forever start /k nf start dev
 ping 127.0.0.1 -n 6 > nul
 cd ..
+cd gds-ms-api
+git pull
+start "gds-ms-api" cmd forever start /k nf start dev
+ping 127.0.0.1 -n 6 > nul
+cd ..
 cd gds-env
