@@ -11,4 +11,5 @@ copy user-service\.env  ..\user-service\.env
 copy time-service\.env  ..\time-service\.env
 copy school-config-service\.env  ..\school-config-service\.env
 copy cataloguing-service\.env ..\cataloguing-service\.env
+copy authentication-module\.env ..\authentication-module\.env
 copy gds-ms-api\.env  ..\gds-ms-api\.env
