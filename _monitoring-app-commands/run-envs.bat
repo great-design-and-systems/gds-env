@@ -24,6 +24,11 @@ git pull
 start "import-service" cmd forever start /k nf start web
 ping 127.0.0.1 -n 6 > nul
 cd ..
+cd export-service
+git pull
+start "export-service" cmd forever start /k nf start web
+ping 127.0.0.1 -n 6 > nul
+cd ..
 cd time-service
 git pull
 start "time-service" cmd forever start /k nf start web

@@ -14,6 +14,9 @@ cd ..
 cd import-service
 start cmd /k git pull
 cd ..
+cd export-service
+start cmd /k git pull
+cd ..
 cd time-service
 start cmd /k git pull
 cd ..

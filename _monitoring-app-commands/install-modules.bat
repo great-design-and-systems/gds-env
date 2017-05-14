@@ -14,6 +14,9 @@ cd ..
 cd import-service
 start cmd /k npm install
 cd ..
+cd export-service
+start cmd /k npm install
+cd ..
 cd time-service
 start cmd /k npm install
 cd ..
