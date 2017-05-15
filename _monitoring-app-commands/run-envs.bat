@@ -1,3 +1,4 @@
+start "mongod" cmd start /k mongod
 cd ..\..
 cd gds-logger
 git pull
@@ -47,6 +48,16 @@ cd ..
 cd gds-ms-api
 git pull
 start "gds-ms-api" cmd forever start /k nf start dev
+ping 127.0.0.1 -n 6 > nul
+cd ..
+cd gds-lrts
+git pull
+start "gds-lrts" cmd forever start /k nf start web
+ping 127.0.0.1 -n 6 > nul
+cd ..
+cd gds-terminal
+git pull
+start "gds-terminal" cmd forever start /k nf start web
 ping 127.0.0.1 -n 6 > nul
 cd ..
 cd gds-env\_monitoring-app-commands
