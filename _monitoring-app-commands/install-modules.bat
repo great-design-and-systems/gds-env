@@ -23,6 +23,9 @@ cd ..
 cd school-config-service
 start cmd /k npm install
 cd ..
+cd authentication-module
+start cmd /k npm install
+cd ..
 cd gds-ms-api
 start cmd /k npm install
 cd ..
