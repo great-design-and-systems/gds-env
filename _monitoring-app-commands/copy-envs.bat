@@ -8,3 +8,5 @@ copy ..\time-service\.env   ..\..\time-service\.env
 copy ..\school-config-service\.env   ..\..\school-config-service\.env
 copy ..\authentication-module\.env  ..\..\authentication-module\.env
 copy ..\gds-ms-api\.env.monitor   ..\..\gds-ms-api\.env
+copy ..\gds-lrts\.env ..\..\gds-lrts\.env
+copy ..\gds-terminal\.env ..\..\gds-terminal\.env
